@@ -1,0 +1,16 @@
+---
+
+- name: run the playbook tasks on the localhost
+  hosts: localhost
+  become: yes
+  tasks:
+
+  - name: Clone qutebrowser from Github
+    git: 
+      repo: https://github.com/qutebrowser/qutebrowser.git
+      clone: yes
+      recursive: no
+      update: yes
+      dest: /opt/qutebrowser
+
+    

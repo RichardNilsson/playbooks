@@ -1,0 +1,25 @@
+---
+
+- name: run the playbook tasks on the localhost
+  hosts: localhost
+  become: yes
+  tasks:
+
+  - name: Update repositories and install "{{ packages }}"  
+    apt: 
+      name: "{{ packages }}"
+      update_cache: yes
+    vars:
+      packages:
+      - git
+      - vim
+      - magic-wormhole
+      - tmux
+
+  - name: Install the following pip packages "{{ pips }}"
+    pip:
+      name: "{{ pips }}"
+    vars:
+      pips:
+      - tox
+
