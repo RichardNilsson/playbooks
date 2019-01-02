@@ -24,6 +24,9 @@
       - xinit
       - pulseaudio-utils
 
+  - name: Install pip
+    command: easy_install pip
+
 #  - name: Install the following pip packages "{{ pips }}"
 #    pip:
 #      name: "{{ pips }}"
