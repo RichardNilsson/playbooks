@@ -23,6 +23,7 @@
       - xorg
       - xinit
       - pulseaudio-utils
+      - curl
 
   - name: Install pip
     command: easy_install pip
