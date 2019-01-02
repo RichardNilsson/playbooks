@@ -1,0 +1,15 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: run the playbook tasks on the localhost
+  hosts: localhost
+  become: yes
+  tasks:
+
+
+  - name: Install the following pip packages "{{ pips }}"
+    pip:
+      name: "{{ pips }}"
+    vars:
+      pips:
+      - virtualenv
