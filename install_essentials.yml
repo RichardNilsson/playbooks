@@ -1,3 +1,4 @@
+#!/usr/bin/env "ansible-playbook -K"
 ---
 
 - name: run the playbook tasks on the localhost
@@ -15,11 +16,18 @@
       - vim
       - magic-wormhole
       - tmux
+      - zsh
+      - yadm
+      - pass
+      - i3
+      - xorg
+      - xinit
+      - pulseaudio-utils
 
-  - name: Install the following pip packages "{{ pips }}"
-    pip:
-      name: "{{ pips }}"
-    vars:
-      pips:
-      - tox
+#  - name: Install the following pip packages "{{ pips }}"
+#    pip:
+#      name: "{{ pips }}"
+#    vars:
+#      pips:
+#      - tox
 
