@@ -3,7 +3,7 @@
 
 - name: run the playbook tasks on the localhost
   hosts: localhost
-  become: yes
+  become: no
   tasks:
 
   - name: Clone qutebrowser from Github
