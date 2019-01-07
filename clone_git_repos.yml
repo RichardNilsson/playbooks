@@ -15,4 +15,28 @@
       #dest: /opt/qutebrowser
       dest: ./qutebrowser
 
+  - name: Clone i3-gaps-deb (setup script for i3-gaps)  from Github
+    git: 
+      repo: https://github.com/maestrogerardo/i3-gaps-deb
+      clone: yes
+      recursive: no
+      update: yes
+      dest: ./i3-gaps-deb
+
+  - name: Clone Nerd Fonts from Github
+    git: 
+      repo: https://github.com/ryanoasis/nerd-fonts.git
+      clone: yes
+      depth: 1
+      recursive: no
+      update: yes
+      dest: ./nerd_fonts
+    
+  - name: Clone File icons for Ranger file manager from Github
+    git: 
+      repo: https://github.com/alexanderjeurissen/ranger_devicons
+      clone: yes
+      recursive: no
+      update: yes
+      dest: ./ranger_devicons
     
