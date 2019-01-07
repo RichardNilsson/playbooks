@@ -22,8 +22,16 @@
       - i3
       - xorg
       - xinit
+      # pulseaudio-utils are used to control audio vid pactl
       - pulseaudio-utils
       - curl
+      - openvpn
+      # fuse is used to be able to mount restic backups
+      - fuse
+      # dosfstools are used to format disks
+      - dosfstools
+      # aptitude is likely recommended to install packages by the user
+      - aptitude
 
   - name: Install pip
     command: easy_install pip
