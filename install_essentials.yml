@@ -32,6 +32,19 @@
       - dosfstools
       # aptitude is likely recommended to install packages by the user
       - aptitude
+      - firefox-esr
+      - rxvt-unicode
+      - connman
+      - ranger
+      - i3blocks
+      - iw
+      - xbacklight
+      # Trying to get pydbus for vpn_status in py3status working
+      #- python3-pydbus
+      #- python-gi
+      #- python-gobject
+      #- libgirepository-1.0-1
+      - gnupg2
 
   - name: Install pip
     command: easy_install pip
