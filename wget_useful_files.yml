@@ -1,0 +1,32 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- name: run the playbook tasks on the localhost
+  hosts: localhost
+  become: no
+  tasks:
+
+  - name: Create useful_files/
+    file:
+      path: ./useful_files
+      state: directory
+ 
+  - name: Create $HOME/bin
+    file:
+      path: $HOME/bin
+      state: directory
+     
+  - name: Get light to be able to control screen brightness
+    get_url: 
+      url: https://github.com/haikarainen/light/releases/download/v1.2/light_1.2_amd64.deb
+      dest: ./useful_files/light_1.2_amd64.deb
+
+  - name: Get passmenu 
+    get_url:
+      url: https://git.zx2c4.com/password-store/plain/contrib/dmenu/passmenu
+      dest: $HOME/bin/passmenu
+
+  - name: Get libssl1.0.0 (for qutebrowser) 
+    get_url:
+      url: https://packages.debian.org/jessie/amd64/libssl1.0.0/download
+      dest: ./useful_files/libssl1.0.0
