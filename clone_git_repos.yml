@@ -13,7 +13,7 @@
       recursive: no
       update: yes
       #dest: /opt/qutebrowser
-      dest: ./qutebrowser
+      dest: $HOME/bin/qutebrowser
 
   - name: Clone i3-gaps-deb (setup script for i3-gaps)  from Github
     git: 
