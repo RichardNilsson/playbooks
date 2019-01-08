@@ -19,6 +19,8 @@
       - zsh
       - yadm
       - pass
+      # pinentry for pass
+      - pinentry-qt
       - i3
       - xorg
       - xinit
@@ -45,7 +47,8 @@
       #- python-gobject
       #- libgirepository-1.0-1
       - gnupg2
-
+      - calibre
+      
   - name: Install pip
     command: easy_install pip
 
